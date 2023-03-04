@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
 
-    PuzzleController *m_appCtrl = new PuzzleController(QQuickImageProvider::Image);
+    PuzzleController *m_appCtrl = new PuzzleController(&app);
 
     engine.addImageProvider(QLatin1String("imageprovider"), m_appCtrl);
     engine.rootContext()->setContextProperty("puzzleController", m_appCtrl);

@@ -1,9 +1,10 @@
-#include "puzzleController.h"
+#include "PuzzleController.h"
 
 #include <QDir>
 #include <QDebug>
+#include <QtMath>
 
-PuzzleController::PuzzleController(ImageType type, Flags flags) : QQuickImageProvider(type, flags)
+PuzzleController::PuzzleController(QObject* parent) : QQuickImageProvider(QQuickImageProvider::Image)
 {
 }
 

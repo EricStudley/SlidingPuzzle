@@ -1,7 +1,5 @@
-#ifndef IMAGE_PROVIDER_H
-#define IMAGE_PROVIDER_H
+#pragma once
 
-#include <QtMath>
 #include <QQuickImageProvider>
 
 class PuzzleController : public QObject, public QQuickImageProvider
@@ -13,7 +11,7 @@ class PuzzleController : public QObject, public QQuickImageProvider
     Q_PROPERTY(int columnCount MEMBER m_columnCount NOTIFY columnCountChanged)
 
 public:
-    explicit PuzzleController(ImageType type, Flags flags = nullptr);
+    explicit PuzzleController(QObject* parent = nullptr);
 
     QImage requestImage(const QString& id, QSize* size, const QSize& requestedSize);
 
@@ -35,4 +33,3 @@ private:
     int m_columnCount = 0;
     QString m_puzzleFilename;
 };
-#endif // IMAGE_PROVIDER_H

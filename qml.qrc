@@ -2,4 +2,7 @@
     <qresource prefix="/qml">
         <file alias="main.qml">qml/main.qml</file>
     </qresource>
+    <qresource prefix="/images">
+        <file alias="background_border.png">images/background_border.png</file>
+    </qresource>
 </RCC>
